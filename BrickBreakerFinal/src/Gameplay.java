@@ -22,7 +22,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener
 	
 	private int ballposX = 120;
 	private int ballposY = 350;
-	private int ballXdir = -1;
+	private int ballXdir = -2;
 	private int ballYdir = -2;
 	
 	private MapGenerator map;
@@ -58,7 +58,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener
 		g.drawString(""+score, 590,30);
 		
 		// the paddle
-		g.setColor(Color.green);
+		g.setColor(Color.blue);
 		g.fillRect(playerX, 550, 100, 8);
 		
 		// the ball
@@ -130,12 +130,12 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener
 				play = true;
 				ballposX = 120;
 				ballposY = 350;
-				ballXdir = -1;
+				ballXdir = -2;
 				ballYdir = -2;
 				playerX = 310;
 				score = 0;
-				totalBricks = 21;
-				map = new MapGenerator(3, 7);
+				totalBricks = 48;
+				map = new MapGenerator(4, 12);
 				
 				repaint();
 			}
@@ -197,7 +197,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener
 						if(ballRect.intersects(brickRect))
 						{					
 							map.setBrickValue(0, i, j);
-							score+=5;	
+							score+=1;	
 							totalBricks--;
 							
 							// when ball hit right or left of brick
