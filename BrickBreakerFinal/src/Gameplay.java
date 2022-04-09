@@ -1,11 +1,9 @@
-import java.util.*;
 import java.awt.event.*;
 
 import javax.swing.*;
 
 import java.awt.*;
 
-import javax.swing.*;
 import javax.swing.Timer;
 
 public class Gameplay extends JPanel implements KeyListener, ActionListener 
@@ -16,7 +14,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener
 	private int totalBricks = 48;
 	
 	private Timer timer;
-	private int delay=8;
+	private int delay=4;
 	
 	private int playerX = 310;
 	
